@@ -39,9 +39,57 @@ Since there are a wide variety of lessons already dedicated to this topic, I've 
 
 ## Your first git project
 
+
 ### Step 1: Creating a local git `repository`
 
+When creating a new project on your local machine using git, you'll first create a new repository (or often, 'repo', for short). 
+
+To use git we'll be using the terminal. If you don't have much experience with the terminal and basic commands, check out this tutorial (especially the 'Navigating the Filesystem' and 'Moving Around' sections).
+
+To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
+
+```
+mnelson:Desktop mnelson$ cd ~/Desktop
+mnelson:Desktop mnelson$ mkdir myproject
+mnelson:Desktop mnelson$ cd myproject/
+```
+
+To initialize a git repository in the root of the folder, run the git init command:  
+
+```
+mnelson:myproject mnelson$ git init
+Initialized empty Git repository in /Users/mnelson/Desktop/myproject/.git/
+```
+
 ### Step 2: Adding a new file to your repo
+
+Go ahead and add a new file to the project, using any text editor you like or running a touch command.
+
+Once you've added or modified files in a folder containing a git repo, git will notice that changes have been made inside the repo. But, git won't officially keep track of the file (that is, put it in a commit - we'll talk more about commits next) unless you explicitly tell it to.
+
+```
+mnelson:myproject mnelson$ touch mnelson.txt
+mnelson:myproject mnelson$ ls
+mnelson.txt
+```
+
+After creating the new file, you can use the `git status` command to see which files git knows exist.
+
+```
+mnelson:myproject mnelson$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	mnelson.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+What this basically says is, "Hey, we noticed you created a new file called mnelson.txt, but unless you use the 'git add' command we aren't going to do anything with it."
 
 ### Step 3: Your first `commit`
 
@@ -64,11 +112,32 @@ Add a file to the staging environment using the git add command.
 
 If you rerun the git status command, you'll see that git has added the file to the staging environment (notice the "Changes to be committed" line).  
 
+```
+mnelson:myproject mnelson$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   mnelson.txt
+```
+
+To reiterate, the file has not yet been added to a commit, but it's about to be.
+
 #### Performing the actual `commit`
 
 It's time to create your first commit!
 
 Run the command git commit -m "Your message about the commit"
+
+```
+mnelson:myproject mnelson$ git commit -m "This is my first commit!"
+[master (root-commit) b345d9a] This is my first commit!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mnelson.txt
+```
 
 The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar". That makes the other people who see your commit sad. Very, very, sad.
 

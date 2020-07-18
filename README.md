@@ -45,6 +45,21 @@ Since there are a wide variety of lessons already dedicated to this topic, I've 
 
 ### Step 3: Your first `commit`
 
+To me, a commit is both a snapshot and pit stop. Since git is a version control system, it allows you to move back and forth between different commits. Let's say you made a change to the code. Once you've tested out your code, you can commit these changes to create a new pit stop. 
+
+I know this seems a little confusing, but bear with me.
+
+A commit is a record of what files you have changed since the last time you made a commit. Essentially, you make changes to your repo (for example, adding a file or modifying one) and then tell git to put those files into a commit.
+
+Commits make up the essence of your project and allow you to go back to the state of a project at any point.
+
+So, how do you tell git which files to put into a commit? This is where the staging environment or index come in. As seen in Step 2, when you make changes to your repo, git notices that a file has changed but won't do anything with it (like adding it in a commit).
+
+To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the git add <filename> command (see Step 3 below).
+
+Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the git commit command. 
+
+
 #### What is a `commit`?
 
 #### Adding a file to the staging evironment

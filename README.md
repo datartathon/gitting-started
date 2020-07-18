@@ -60,7 +60,17 @@ To add a file to a commit, you first need to add it to the staging environment. 
 
 #### Adding a file to the staging evironment
 
+Add a file to the staging environment using the git add command. 
+
+If you rerun the git status command, you'll see that git has added the file to the staging environment (notice the "Changes to be committed" line).  
+
 #### Performing the actual `commit`
+
+It's time to create your first commit!
+
+Run the command git commit -m "Your message about the commit"
+
+The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar". That makes the other people who see your commit sad. Very, very, sad.
 
 ### Step 4: Creating a `branch`
 

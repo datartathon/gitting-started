@@ -36,3 +36,11 @@ Since there are a wide variety of lessons already dedicated to this topic, I've 
 * [Install Git on Mac OS X](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
 * [Install Git on Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
 * [Install Git on Linux](https://www.atlassian.com/git/tutorials/install-git#linux)
+
+## Your first git project
+
+### Step 1: Creating a repository
+
+
+
+

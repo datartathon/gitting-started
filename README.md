@@ -39,7 +39,29 @@ Since there are a wide variety of lessons already dedicated to this topic, I've 
 
 ## Your first git project
 
-### Step 1: Creating a repository
+### Step 1: Creating a local git `repository`
+
+### Step 2: Adding a new file to your repo
+
+### Step 3: Your first `commit`
+
+#### What is a `commit`?
+
+#### Adding a file to the staging evironment
+
+#### Performing the actual `commit`
+
+### Step 4: Creating a `branch`
+
+### Step 5: Creating a `repository` on Github
+
+### Step 6: `Push` your `branch` to the Github repo
+
+### Step 7: Creating a `pull request`
+
+### Step 8: `Merge` a pull request
+
+### Step 9: `Pull` changes back to the local machine.
 
 
 

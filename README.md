@@ -28,3 +28,11 @@ I wouldn't say that `git` is beginner friendly. It comes with a lot of jargon su
 ### `git` is a concept, Gitlab, Github, BItBucket etc. are just implementations of the `git` concept.
 
 `git` was introduced to the world by Linus Torvalds, the same guy that invented Linux. When I first learned about him, I really admired him for his a genius, he created an open source OS that changed the world, and then created a mechanism where thousands of people could collaborate. However, over the years it has come to light that [working with the guy is a nightmare](https://www.newyorker.com/science/elements/after-years-of-abusive-e-mails-the-creator-of-linux-steps-aside), and now I'm not sure how to feel about the guy anymore.
+
+
+## Installing git
+Since there are a wide variety of lessons already dedicated to this topic, I've decided to save some time and screen-space, by pointing you to tutorials on the topic:
+
+* [Install Git on Mac OS X](https://www.atlassian.com/git/tutorials/install-git#mac-os-x)
+* [Install Git on Windows](https://www.atlassian.com/git/tutorials/install-git#windows)
+* [Install Git on Linux](https://www.atlassian.com/git/tutorials/install-git#linux)

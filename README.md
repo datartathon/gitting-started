@@ -18,9 +18,9 @@ We've all dealt with command line tools in the past. As someone who grew up usin
 
 ### `git` has a lot of jargon.
 
-I wouldn't say that `git` is beginner friendly. It comes with a lot of jargon such as `repository`, `cloning`, `pulling from master`, `diff`, `merge-request`. My approach to dealing with them is by making analogies, which I will briefly expand in i bit.   
+I wouldn't say that `git` is beginner friendly. It comes with a lot of jargon such as `repository`, `cloning`, `pulling from master`, `diff`, `merge-request`. My approach to dealing with them is by making analogies, which I will briefly expand in a bit.   
 
 
 ### `git` is a concept, Gitlab, Github, BItBucket etc. are just implementations of the `git` concept.
 
-`git` was introduced to the world by Linus Torvalds, the same guy that invented Linux. When I first learned about him, I thought he was a genius, but, apparently working with the guy is a nightmare.
+`git` was introduced to the world by Linus Torvalds, the same guy that invented Linux. When I first learned about him, I really admired him for his a genius, he created an open source OS that changed the world, and then created a mechanism where thousands of people could collaborate. However, over the years it has come to light that [working with the guy is a nightmare](https://www.newyorker.com/science/elements/after-years-of-abusive-e-mails-the-creator-of-linux-steps-aside), and now I'm not sure how to feel about the guy anymore.

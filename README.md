@@ -12,6 +12,7 @@ As someone coming from a mechanical engineering background, my motivation for cr
 
 We've all dealt with command line tools in the past. As someone who grew up using Windows throughout my childhood, the strongest example I can think of is opening up MS-DOS (or Terminal) and navigating the present directory using commands like `cd`, `mkdir`, `dir`, etc. 
 
+![MS DOS](https://github.com/datartathon/gitting-started/blob/master/dos.jpg?raw=true)
 
 ### `git` helps facilitate collaboration among coders.
 

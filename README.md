@@ -16,6 +16,8 @@ We've all dealt with command line tools in the past. As someone who grew up usin
 
 The alternative to command-line tools are GUIs, i.e. Graphical User Interfaces. If these two (GUIs and command-line tools), were to come head to head in a contest, GUI would steal the show in the "user-friendliness" category, whereas commad line tools would come as victor in "automation" and "server-side deployment". This is why, I found out, developers prefer command line tools: all actions can be sequentially arranged through text-based commands, which makes automation a walk in the park.  
 
+> For all R enthusiasts out there, R-Base is a command line tool, and RStudio is a GUI that invokes r-base commands depending on user interaction.
+
 ### `git` helps facilitate collaboration among coders.
 
 ### `git` has a lot of jargon.

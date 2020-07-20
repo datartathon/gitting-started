@@ -180,19 +180,120 @@ If you only want to keep track of your code locally, you don't need to use GitHu
 
 To create a new repo on GitHub, log in and go to the [DATArtathon GitHub home page](https://github.com/datartathon). You should see a green 'New' button: 
 
-![DAT/Artathon Home](https://github.com/datartathon/gitting-started/blob/master/datartathon.png?raw=true)
+<img src="https://github.com/datartathon/gitting-started/blob/master/datartathon.png?raw=true" width="600px"/>
 
 After clicking the button, GitHub will ask you to name your repo and provide a brief description:
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true" width="400px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true" width="600px"/>
 
 When you're done filling out the information, press the 'Create repository' button to make your new repo.
 
 GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the '....or push an existing repository from the command line' section: 
 
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [7:57:43] C:148 $ git remote add origin https://github.com/datartathon/sample-git-project.git
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [8:14:13] $ git push -u origin master
+Username for 'https://github.com': arogyakoirala
+Password for 'https://arogyakoirala@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 227 bytes | 227.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/datartathon/sample-git-project.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+```
+
+You'll want to change the URL in the first command line to what GitHub lists in this section since your GitHub username and repo name are different.
+
 ### Step 6: `Push` your `branch` to the Github repo
 
+Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the master branch.
+
+To push changes onto a new branch on GitHub, you'll want to run `git push origin yourbranchname`. GitHub will automatically create the branch for you on the remote repository:
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [8:16:12] $ git push origin my-funny-branch
+Username for 'https://github.com': arogyakoirala
+Password for 'https://arogyakoirala@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'my-funny-branch' on GitHub by visiting:
+remote:      https://github.com/datartathon/sample-git-project/pull/new/my-funny-branch
+remote:
+To https://github.com/datartathon/sample-git-project.git
+ * [new branch]      my-funny-branch -> my-funny-branch
+```
+
+You might be wondering what that "origin" word means in the command above. What happens is that when you clone a remote repository to your local machine, git creates an alias for you. In nearly all cases this alias is called "origin." It's essentially shorthand for the remote repository's URL. So, to push your changes to the remote repository, you could've used either the command: `git push git@github.com:git/git.git yourbranchname` or `git push origin yourbranchname`
+
+(If this is your first time using GitHub locally, it might prompt you to log in with your GitHub username and password.)
+
+If you refresh the GitHub page, you'll see note saying a branch with your name has just been pushed into the repository. You can also click the dropdown button that says 'master' to see your branch listed there.
+
+
+<img src="https://github.com/datartathon/gitting-started/blob/master/branches.png?raw=true" width="900px"/>
+
 ### Step 7: Creating a `pull request`
+
+A pull request (or PR) is a way to alert a repo's owners that you want to make some changes to their code. It allows them to review the code and make sure it looks good before putting your changes on the master branch.
+
+Before we submit a pull request, let's try making some changes to the  `example-file.txt` within the `my-funny-branch` branch so that the two brances (master and my-funny-branch) are not identical.
+
+To do this, open up `example-file.txt` write something on it, and save it.  
+
+
+<img src="https://github.com/datartathon/gitting-started/blob/master/change_text.png?raw=true" width="900px"/>
+
+
+Use the git status command to review changes.
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [8:27:36] $ git status
+On branch my-funny-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   example-file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Commit your change:
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch x [8:30:45] C:1 $ git add .
+
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch x [8:30:53] $ git commit -m "Modified example-file.txt"
+[my-funny-branch 671e86c] Modified example-file.txt
+ 1 file changed, 1 insertion(+)
+
+```
+
+Push your changes to the remote branch:
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [8:31:03] $ git push origin my-funny-branch
+Username for 'https://github.com': arogyakoirala
+Password for 'https://arogyakoirala@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/datartathon/sample-git-project.git
+   d640917..671e86c  my-funny-branch -> my-funny-branch
+```
+
+Now we are ready to open a pull request. Head over to the "Pull request" in your project, the page should tell you that `my-funny-branch` has new changes. Click the "Compare and pull request" button.
+
+
+<img src="https://github.com/datartathon/gitting-started/blob/master/new_pull_request.png?raw=true" width="900px"/>
+
+Finally, click the "Create pull request" button
+
+<img src="https://github.com/datartathon/gitting-started/blob/master/create_pull_request.png?raw=true" width="900px"/>
 
 ### Step 8: `Merge` a pull request
 

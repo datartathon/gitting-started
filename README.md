@@ -44,7 +44,9 @@ Since there are a wide variety of lessons already dedicated to this topic, I've 
 
 When creating a new project on your local machine using git, you'll first create a new repository (or often, 'repo', for short). 
 
-To use git we'll be using the terminal. If you don't have much experience with the terminal and basic commands, check out [this tutorial](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955).
+To use git we'll be using the terminal. If you don't have much experience with the terminal and basic commands, check out [this tutorial](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955). 
+
+> If you are using Windows I highly recommend using [Git Bash](https://gitforwindows.org/) or [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7) as both these tools are syntactically similar to Linux and Mac. Personally, I run Ubuntu on Windows using [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) and [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab). 
 
 To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
 
@@ -56,7 +58,7 @@ To begin, open up a terminal and move to where you want to place the project on 
 ```
 You can now initialize a git repository in the root of the folder, by running the `git init` command:  
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project [7:34:13] $ git init
 Initialized empty Git repository in /home/arogya/projects/sample-git-project/.git/
 ```
@@ -67,14 +69,14 @@ Go ahead and add a new file to the project, using any text editor you like, or i
 
 Once you've added or modified files in a folder containing a git repo, git will notice that changes have been made inside the repo. But, git won't officially keep track of the file (that is, put it in a commit - we'll talk more about commits next) unless you explicitly tell it to.
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master o [7:35:54] $ touch example-file.txt
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:38:18] $ ls
 example-file.txt
 ```
 After creating the new file, you can use the `git status` command to see which files git knows exist.
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:38:33] $ git status
 On branch master
 
@@ -101,19 +103,18 @@ So, how do you tell git which files to put into a commit? This is where the stag
 
 To add a file to a commit, you first need to add it to the staging environment. To do this, you can use the `git add <filename>` command (see Step 3 below). Once you've used the git add command to add all the files you want to the staging environment, you can then tell git to package them into a commit using the `git commit` command. 
 
-
-
 #### Adding a file to the staging evironment
 
-Add a file to the staging environment using the `git add .` command. Adding a "." after the `git add` command tells git to include everything in the present working directory to the staging environment.
+Add a file to the staging environment using the `git add .` command. 
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:41:27] $ git add .
 ```
+Adding a "." after the `git add` command tells git to include everything in the present working directory to the staging environment. You can also choose to add individual files to the staging environment using `git add YOUR_FILENAME_HERE`
 
 If you rerun the `git status` command, you'll see that git has added the file to the staging environment (notice the "Changes to be committed" line).  
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:41:36] $ git status
 On branch master
 
@@ -132,7 +133,7 @@ It's time to create your first commit!
 
 Run the command `git commit -m "Your message about the commit"` to commit your changes to the repo.
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:43:59] C:130 $ git commit -m "First commit FTW"
 [master (root-commit) d640917] First commit FTW
  1 file changed, 0 insertions(+), 0 deletions(-)

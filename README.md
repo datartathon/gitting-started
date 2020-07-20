@@ -309,7 +309,7 @@ Sometimes you'll be a co-owner or the sole owner of a repo, in which case you ma
 
 Go ahead and click the green 'Merge pull request' button. This will merge your changes into the master branch.
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/merge.png?raw=true" width="900px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/merged.png?raw=true" width="900px"/>
 
 When you're done, I recommend deleting your branch (too many branches can become messy), so hit that grey 'Delete branch' button as well.
 

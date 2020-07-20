@@ -2,7 +2,7 @@
 
 Hi, and welcome to this brief introduction to the Git versioning system. 
 
-As someone coming from a mechanical engineering background, my motivation for creating this resource from the fact that like most of us in this group, I have had a somewhat non-linear, non-traditional path to coding. My goal is to shed share what I've learned about how developers approach code management, and also talk about using GIT as not just a code management tool, but also an efficient approach to documentation and project management.
+As someone coming from a mechanical engineering background, my motivation for creating this resource from the fact that like most of us in this group, I have had a somewhat non-linear, non-traditional path to coding. My goal is to share what I've learned about how developers approach code management, and also talk about using GIT as not just a code management tool, but also an efficient approach to documentation and project management.
 
 
 ## A few things before we get started.
@@ -18,7 +18,7 @@ The alternative to command-line tools are GUIs, i.e. Graphical User Interfaces. 
 
 > For all R enthusiasts out there, r-base is a command line tool, and RStudio is a GUI that invokes r-base commands depending on user interaction.
 
-### `git` helps facilitate collaboration among coders.
+### `git` helps solve a real problem.
 
 ### `git` has a lot of jargon.
 
@@ -44,55 +44,52 @@ Since there are a wide variety of lessons already dedicated to this topic, I've 
 
 When creating a new project on your local machine using git, you'll first create a new repository (or often, 'repo', for short). 
 
-To use git we'll be using the terminal. If you don't have much experience with the terminal and basic commands, check out this tutorial (especially the 'Navigating the Filesystem' and 'Moving Around' sections).
+To use git we'll be using the terminal. If you don't have much experience with the terminal and basic commands, check out [this tutorial](https://towardsdatascience.com/a-quick-guide-to-using-command-line-terminal-96815b97b955).
 
 To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
 
 ```
-mnelson:Desktop mnelson$ cd ~/Desktop
-mnelson:Desktop mnelson$ mkdir myproject
-mnelson:Desktop mnelson$ cd myproject/
-```
-
-To initialize a git repository in the root of the folder, run the git init command:  
+# arogya @ DESKTOP-U99TER7 in ~ [7:33:38] $ cd projects
+# arogya @ DESKTOP-U99TER7 in ~/projects [7:33:53] $ cd mkdir sample-git-project
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project $ cd projects
 
 ```
-mnelson:myproject mnelson$ git init
-Initialized empty Git repository in /Users/mnelson/Desktop/myproject/.git/
+You can now initialize a git repository in the root of the folder, by running the `git init` command:  
+
+```
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project [7:34:13] $ git init
+Initialized empty Git repository in /home/arogya/projects/sample-git-project/.git/
 ```
 
 ### Step 2: Adding a new file to your repo
 
-Go ahead and add a new file to the project, using any text editor you like or running a touch command.
+Go ahead and add a new file to the project, using any text editor you like, or if you're using linux or mac, by running a [`touch` command](https://www.geeksforgeeks.org/touch-command-in-linux-with-examples/).
 
 Once you've added or modified files in a folder containing a git repo, git will notice that changes have been made inside the repo. But, git won't officially keep track of the file (that is, put it in a commit - we'll talk more about commits next) unless you explicitly tell it to.
 
 ```
-mnelson:myproject mnelson$ touch mnelson.txt
-mnelson:myproject mnelson$ ls
-mnelson.txt
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master o [7:35:54] $ touch example-file.txt
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:38:18] $ ls
+example-file.txt
 ```
-
 After creating the new file, you can use the `git status` command to see which files git knows exist.
 
 ```
-mnelson:myproject mnelson$ git status
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:38:33] $ git status
 On branch master
 
-Initial commit
+No commits yet
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-
-	mnelson.txt
+        example-file.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-What this basically says is, "Hey, we noticed you created a new file called mnelson.txt, but unless you use the 'git add' command we aren't going to do anything with it."
+What this basically says is, "Hey, we noticed you created a new file called example-file.txt, but unless you use the 'git add' command we aren't going to do anything with it."
 
 ### Step 3: Your first `commit`
-
 
 #### What is a `commit`?
 
@@ -108,20 +105,23 @@ To add a file to a commit, you first need to add it to the staging environment. 
 
 #### Adding a file to the staging evironment
 
-Add a file to the staging environment using the git add command. 
-
-If you rerun the git status command, you'll see that git has added the file to the staging environment (notice the "Changes to be committed" line).  
+Add a file to the staging environment using the `git add .` command. Adding a "." after the `git add` command tells git to include everything in the present working directory to the staging environment.
 
 ```
-mnelson:myproject mnelson$ git status
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:41:27] $ git add .
+```
+
+If you rerun the `git status` command, you'll see that git has added the file to the staging environment (notice the "Changes to be committed" line).  
+
+```
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:41:36] $ git status
 On branch master
 
-Initial commit
+No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-
-	new file:   mnelson.txt
+        new file:   example-file.txt
 ```
 
 To reiterate, the file has not yet been added to a commit, but it's about to be.
@@ -130,16 +130,16 @@ To reiterate, the file has not yet been added to a commit, but it's about to be.
 
 It's time to create your first commit!
 
-Run the command git commit -m "Your message about the commit"
+Run the command `git commit -m "Your message about the commit"` to commit your changes to the repo.
 
 ```
-mnelson:myproject mnelson$ git commit -m "This is my first commit!"
-[master (root-commit) b345d9a] This is my first commit!
- 1 file changed, 1 insertion(+)
- create mode 100644 mnelson.txt
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master x [7:43:59] C:130 $ git commit -m "First commit FTW"
+[master (root-commit) d640917] First commit FTW
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 example-file.txt
 ```
 
-The message at the end of the commit should be something related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar". That makes the other people who see your commit sad. Very, very, sad.
+It is good practice to make sure that the message at the end of the commit is related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar". You'll have a hard time tracking your changes if the project evolves to a giant monster of a codebase.
 
 ### Step 4: Creating a `branch`
 

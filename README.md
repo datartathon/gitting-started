@@ -184,7 +184,7 @@ To create a new repo on GitHub, log in and go to the [DATArtathon GitHub home pa
 
 After clicking the button, GitHub will ask you to name your repo and provide a brief description:
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true" style="max-width=600px;"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true" width="400px"/>
 
 When you're done filling out the information, press the 'Create repository' button to make your new repo.
 

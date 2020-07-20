@@ -178,13 +178,13 @@ To exit the funny looking screen, press `q`
 
 If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code. Since we're all working collaboratively on the DATArtathon Github organization, I recommend navigating to the organization's Github page and creating a repository there. 
 
-To create a new repo on GitHub, log in and go to the [DATArtathon GitHub home page]. You should see a green 'New' button: 
+To create a new repo on GitHub, log in and go to the [DATArtathon GitHub home page](https://github.com/datartathon). You should see a green 'New' button: 
 
 ![DAT/Artathon Home](https://github.com/datartathon/gitting-started/blob/master/datartathon.png?raw=true)
 
 After clicking the button, GitHub will ask you to name your repo and provide a brief description:
 
-![DAT/Artathon Home](https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true)
+<img src="https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true" style="max-width=600px;"/>
 
 When you're done filling out the information, press the 'Create repository' button to make your new repo.
 

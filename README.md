@@ -144,7 +144,51 @@ It is good practice to make sure that the message at the end of the commit is re
 
 ### Step 4: Creating a `branch`
 
-### Step 5: Creating a `repository` on Github
+Now that you've made a new commit, let's try something a little more advanced.
+
+Say you want to make a new feature but are worried about making changes to the main project while developing the feature. This is where [git branches](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) come in. 
+
+Branches allow you to move back and forth between 'states' of a project. For instance, if you want to add a new page to your website you can create a new branch just for that page without affecting the main part of the project. Once you're done with the page, you can [merge](https://git-scm.com/docs/git-merge) your changes from your branch into the master branch. When you create a new branch, Git keeps track of which commit your branch 'branched' off of, so it knows the history behind all the files. 
+
+Let's say you are on the master branch and want to create a new branch to develop your web page. Here's what you'll do: Run `git checkout -b <my branch name>`. This command will automatically create a new branch and then 'check you out' on it, meaning git will move you to that branch, off of the master branch. Let's do that now.
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master o [7:56:36] $ git checkout -b my-funny-branch
+Switched to a new branch 'my-funny-branch'
+```
+
+After running the above command, you can use the `git branch` command to confirm that your branch was created:
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [7:56:48]
+$ git branch
+
+
+  master
+* my-funny-branch
+(END)
+```
+The branch name with the asterisk next to it indicates which branch you're pointed to at that given time. 
+
+Now, if you switch back to the master branch and make some more commits, your new branch won't see any of those changes until you merge those changes onto your new branch.
+
+To exit the funny looking screen, press `q`
+
+### Step 5: Creating a `repository` on Github inside the DAT/Artathon organization
+
+If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code. Since we're all working collaboratively on the DATArtathon Github organization, I recommend navigating to the organization's Github page and creating a repository there. 
+
+To create a new repo on GitHub, log in and go to the [DATArtathon GitHub home page]. You should see a green 'New' button: 
+
+![DAT/Artathon Home](https://github.com/datartathon/gitting-started/blob/master/datartathon.png?raw=true)
+
+After clicking the button, GitHub will ask you to name your repo and provide a brief description:
+
+![DAT/Artathon Home](https://github.com/datartathon/gitting-started/blob/master/new_repo.png?raw=true)
+
+When you're done filling out the information, press the 'Create repository' button to make your new repo.
+
+GitHub will ask if you want to create a new repo from scratch or if you want to add a repo you have created locally. In this case, since we've already created a new repo locally, we want to push that onto GitHub so follow the '....or push an existing repository from the command line' section: 
 
 ### Step 6: `Push` your `branch` to the Github repo
 

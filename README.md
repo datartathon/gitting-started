@@ -232,7 +232,7 @@ You might be wondering what that "origin" word means in the command above. What 
 If you refresh the GitHub page, you'll see note saying a branch with your name has just been pushed into the repository. You can also click the dropdown button that says 'master' to see your branch listed there.
 
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/branches.png?raw=true" width="900px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/branches.PNG?raw=true" width="900px"/>
 
 ### Step 7: Creating a `pull request`
 
@@ -243,7 +243,7 @@ Before we submit a pull request, let's try making some changes to the  `example-
 To do this, open up `example-file.txt` write something on it, and save it.  
 
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/change_text.PNG?raw=true" width="900px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/change_text.png?raw=true" width="900px"/>
 
 
 Use the git status command to review changes.

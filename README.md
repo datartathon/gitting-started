@@ -297,8 +297,63 @@ Finally, click the "Create pull request" button
 
 ### Step 8: `Merge` a pull request
 
+This is what it looks like once you've submitted the pull request:
+
+<img src="https://github.com/datartathon/gitting-started/blob/master/merge.png?raw=true" width="900px"/>
+
+You might see a big green button at the bottom that says 'Merge pull request'. Clicking this means you'll merge your changes into the master branch.
+
+Note that this button won't always be green. In some cases it'll be grey, which means you're faced with a merge conflict. This is when there is a change in one file that conflicts with a change in another file and git can't figure out which version to use. You'll have to manually go in and tell git which version to use.
+
+Sometimes you'll be a co-owner or the sole owner of a repo, in which case you may not need to create a PR to merge your changes. However, it's still a good idea to make one so you can keep a more complete history of your updates and to make sure you always create a new branch when making changes.
+
+Go ahead and click the green 'Merge pull request' button. This will merge your changes into the master branch.
+
+<img src="https://github.com/datartathon/gitting-started/blob/master/merge.png?raw=true" width="900px"/>
+
+When you're done, I recommend deleting your branch (too many branches can become messy), so hit that grey 'Delete branch' button as well.
+
+You can double check that your commits were merged by clicking on the 'Commits' link on the first page of your new repo.
+
+
+
 ### Step 9: `Pull` changes back to the local machine.
 
+Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the master branch doesn't exist in the master branch on your local machine.
 
+In order to get the most recent changes that you or others have merged on GitHub, use the `git pull origin master` command (when working on the master branch).
 
+First we switch to the master branch.
 
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:my-funny-branch o [8:32:02] $ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+```
+
+Then we pull the changes:
+
+```sh
+# arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project on git:master o [8:46:21] C:130 $ git pull origin master
+Username for 'https://github.com': arogyakoirala
+Password for 'https://arogyakoirala@github.com':
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 641 bytes | 641.00 KiB/s, done.
+From https://github.com/datartathon/sample-git-project
+ * branch            master     -> FETCH_HEAD
+   d640917..843e57a  master     -> origin/master
+Updating d640917..843e57a
+Fast-forward
+ example-file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+```
+
+This shows you all the files that have changed and how they've changed.
+
+Now we can use the git log command again to see all new commits.
+
+### Step 10: We're done!
+
+Congratulations! You've successfully made a PR and merged your code to the master branch.

@@ -48,7 +48,7 @@ To use git we'll be using the terminal. If you don't have much experience with t
 
 To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
 
-```
+```sh
 # arogya @ DESKTOP-U99TER7 in ~ [7:33:38] $ cd projects
 # arogya @ DESKTOP-U99TER7 in ~/projects [7:33:53] $ cd mkdir sample-git-project
 # arogya @ DESKTOP-U99TER7 in ~/projects/sample-git-project $ cd projects

@@ -243,7 +243,7 @@ Before we submit a pull request, let's try making some changes to the  `example-
 To do this, open up `example-file.txt` write something on it, and save it.  
 
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/change_text.png?raw=true" width="900px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/change_text.PNG?raw=true" width="900px"/>
 
 
 Use the git status command to review changes.
@@ -289,11 +289,11 @@ To https://github.com/datartathon/sample-git-project.git
 Now we are ready to open a pull request. Head over to the "Pull request" in your project, the page should tell you that `my-funny-branch` has new changes. Click the "Compare and pull request" button.
 
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/new_pull_request.png?raw=true" width="900px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/new_pull_request.PNG?raw=true" width="900px"/>
 
 Finally, click the "Create pull request" button
 
-<img src="https://github.com/datartathon/gitting-started/blob/master/create_pull_request.png?raw=true" width="900px"/>
+<img src="https://github.com/datartathon/gitting-started/blob/master/create_pull_request.PNG?raw=true" width="900px"/>
 
 ### Step 8: `Merge` a pull request
 

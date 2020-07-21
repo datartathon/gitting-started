@@ -1,6 +1,6 @@
 
 
-## Step 1: Creating a local git `repository`
+## Step 1: Creating a local git "repository"
 
 When creating a new project on your local machine using git, you'll first create a new repository (or often, 'repo', for short). 
 
@@ -23,7 +23,7 @@ You can now initialize a git repository in the root of the folder, by running th
 Initialized empty Git repository in /home/arogya/projects/sample-git-project/.git/
 ```
 
-## Step 2: Adding a new file to your repo
+## Step 2: Adding a new file to your repository
 
 Go ahead and add a new file to the project, using any text editor you like, or if you're using linux or mac, by running a [`touch` command](https://www.geeksforgeeks.org/touch-command-in-linux-with-examples/).
 
@@ -51,9 +51,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 What this basically says is, "Hey, we noticed you created a new file called example-file.txt, but unless you use the 'git add' command we aren't going to do anything with it."
 
-## Step 3: Your first `commit`
+## Step 3: Your first "commit"
 
-### What is a `commit`?
+### What is a "commit"?
 
 To me, a commit is both a snapshot and pit stop. I know this seems a little confusing, but bear with me.
 
@@ -87,7 +87,7 @@ Changes to be committed:
 
 To reiterate, the file has not yet been added to a commit, but it's about to be.
 
-### Performing the actual `commit`
+### Performing the actual "commit"
 
 It's time to create your first commit!
 
@@ -102,7 +102,7 @@ Run the command `git commit -m "Your message about the commit"` to commit your c
 
 It is good practice to make sure that the message at the end of the commit is related to what the commit contains - maybe it's a new feature, maybe it's a bug fix, maybe it's just fixing a typo. Don't put a message like "asdfadsf" or "foobar". You'll have a hard time tracking your changes if the project evolves to a giant monster of a codebase.
 
-## Step 4: Creating a `branch`
+## Step 4: Creating a "branch"
 
 Now that you've made a new commit, let's try something a little more advanced.
 
@@ -134,7 +134,7 @@ Now, if you switch back to the master branch and make some more commits, your ne
 
 To exit the funny looking screen, press `q`
 
-## Step 5: Creating a `repository` on Github inside the DAT/Artathon organization
+## Step 5: Creating a "repository" on Github inside the **DAT/Artathon** organization account
 
 If you only want to keep track of your code locally, you don't need to use GitHub. But if you want to work with a team, you can use GitHub to collaboratively modify the project's code. Since we're all working collaboratively on the DATArtathon Github organization, I recommend navigating to the organization's Github page and creating a repository there. 
 
@@ -166,7 +166,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 You'll want to change the URL in the first command line to what GitHub lists in this section since your GitHub username and repo name are different.
 
-## Step 6: `Push` your `branch` to the Github repo
+## Step 6: "Push" your "branch" to the Github repo
 
 Now we'll push the commit in your branch to your new GitHub repo. This allows other people to see the changes you've made. If they're approved by the repository's owner, the changes can then be merged into the master branch.
 
@@ -194,7 +194,7 @@ If you refresh the GitHub page, you'll see note saying a branch with your name h
 
 <img src="https://github.com/datartathon/gitting-started/blob/master/images/branches.PNG?raw=true" width="900px"/>
 
-## Step 7: Creating a `pull request`
+## Step 7: Creating a "pull request"
 
 A pull request (or PR) is a way to alert a repo's owners that you want to make some changes to their code. It allows them to review the code and make sure it looks good before putting your changes on the master branch.
 
@@ -255,7 +255,7 @@ Finally, click the "Create pull request" button
 
 <img src="https://github.com/datartathon/gitting-started/blob/master/images/create_pull_request.PNG?raw=true" width="900px"/>
 
-## Step 8: `Merge` a pull request
+## Step 8: "Merge" a pull request
 
 This is what it looks like once you've submitted the pull request:
 
@@ -277,7 +277,7 @@ You can double check that your commits were merged by clicking on the 'Commits' 
 
 
 
-## Step 9: `Pull` changes back to the local machine.
+## Step 9: "Pull" changes back to the local machine.
 
 Right now, the repo on GitHub looks a little different than what you have on your local machine. For example, the commit you made in your branch and merged into the master branch doesn't exist in the master branch on your local machine.
 

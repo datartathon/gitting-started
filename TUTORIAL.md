@@ -8,7 +8,7 @@ To use git we'll be using the terminal. If you don't have much experience with t
 
 > If you are using Windows I highly recommend using [Git Bash](https://gitforwindows.org/) or [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7) as both these tools are syntactically similar to Linux and Mac. Personally, I run Ubuntu on Windows using [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) and [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab). 
 
-To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command. For example, if you have a 'projects' folder on your desktop, you'd do something like:
+To begin, open up a terminal and move to where you want to place the project on your local machine using the cd (change directory) command:
 
 ```sh
 # arogya @ DESKTOP-U99TER7 in ~ [7:33:38] $ cd projects

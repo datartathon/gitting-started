@@ -18,7 +18,9 @@ The alternative to command-line tools are GUIs, i.e. Graphical User Interfaces. 
 
 > For all R enthusiasts out there, r-base is a command line tool, and RStudio is a GUI that invokes r-base commands depending on user interaction.
 
-### `git` helps solve a real problem.
+### `git` solves a real problem.
+
+My slides on the topic talks about this. I'll add a link to them soom.
 
 ### `git` has a lot of jargon.
 
